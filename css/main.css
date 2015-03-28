@@ -214,9 +214,6 @@ p{
 /***************End Blog Styling**************/
 
 @media (max-width: 600px){
-	body{
-		overflow: hidden;
-	}
 
 	.cont{
 		font-size: 80px;
