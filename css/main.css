@@ -34,7 +34,7 @@ nav a:hover{
 /*page content*/
 
 section{
-	min-height: 660px;
+	height: 660px;
 	padding-top: 20px
 }
 
@@ -68,6 +68,10 @@ section{
 
 #about{
 	background-color: rgba(120,120,250,0.4);
+}
+
+#blog{
+	min-height: 660px !important;
 }
 
 #contact{
@@ -210,6 +214,10 @@ p{
 /***************End Blog Styling**************/
 
 @media (max-width: 600px){
+	body{
+		overflow: hidden;
+	}
+
 	.cont{
 		font-size: 80px;
 		margin:0 auto;
