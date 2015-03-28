@@ -1,0 +1,121 @@
+<!Doctype HTML>
+<html>
+<head>
+<title>John Owuor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/main.css">		
+<link rel="shortcut icon" type="image/ico" href="images/favicon.ico"/>
+<link type="text/css" rel="stylesheet" href="lightSlider/css/lightSlider.css" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="lightSlider/js/jquery.lightSlider.js"></script> 
+<script>
+    	 $(document).ready(function() {
+			$("#demo").lightSlider({
+                loop:true,
+                keyPress:true
+            });
+		});
+
+    	$(function() {
+  		$('a[href*=#]:not([href=#])').click(function() {
+    	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      	var target = $(this.hash);
+      	target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      	if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+		      }
+		    }
+		  });
+		});
+
+</script>
+</head>
+<body>
+	<section id="home">
+	<nav>
+		<ul class="navigation">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#blog">Blog</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+	</nav>
+		<div class="cont">
+			John Owuor
+		</div>
+	</section>
+	<section id="about">
+		<img src="images/silhouette67.png"> <br>
+		<span class="section-header">I am a human</span> 
+			<div class="demo">	
+				<ul id="demo" class="content-slider">
+				  <li><img src="images/burger4.png"> <br> I eat food </li>
+				  <li> <img src="images/drink81.png"> <br> I drink water </li>
+				  <li> <img src="images/showering.png"> <br> I shower daily* <br><span style="font-size:.2em;">*Subject to terms and conditions</span> </li>
+				  <li> <img src="images/codings1.png"> <br> I like writing... code </li>
+				</ul>
+			</div>	
+	<a href="#home" class="top"><img src="images/top.png"></a>
+	</section>
+	<section id="blog">
+	<img src="images/talk18.png"> <img src="images/comments16.png"> <br>
+		<span class="section-header">These are the voices in my head </span> 
+		<br> <br>
+		<div class="blog-container">
+			<div class="blog-image">
+				<a href="blog.html#range2015" class="wrapper"> <span class="text"> Range Rover 2015 review </span> <img src="images/range.jpg" width="300px" height="200px"> </a>
+			</div>
+
+			<div class="blog-image">
+				<a href="blog.html#vegas" class="wrapper"> <span class="text"> What happens in Vegas... </span> <img src="images/vegas.jpg" width="300px" height="200px"> </a>
+			</div>
+
+			<div class="blog-image">
+				<a href="blog.html#modernart" class="wrapper"> <span class="text"> Demystifying modern art </span> <img src="images/modernart.jpg" width="300px" height="200px"> </a>
+			</div>
+
+			<div class="blog-image">
+				<a href="#" class="wrapper"> <span class="text"> Medium rare steak recipe </span> <img src="images/steak.jpg" width="300px" height="200px"> </a>
+			</div>
+
+			<div class="blog-image">
+				<a href="blog.html#topgear" class="wrapper"> <span class="text"> Top Gear after Clarkson: Fail or Fail? </span> <img src="images/topgear.jpg" width="300px" height="200px"> </a>
+			</div>
+
+			<div class="blog-image">
+				<a href="#" class="wrapper"> <span class="text"> The $10k Apple watch, SMH </span> <img src="images/watch.jpg" width="300px" height="200px"> </a>
+			</div> 
+		</div>
+	</section>
+	<section id="contact">
+		<img src="images/contact.png"> <br>
+		<span class="section-header">Stay away</span> <br><br>
+		Seriously, do proceed past this point at your own peril.
+		<div class="social-icons">
+			<a href="https://www.facebook.com/owuor91"><img src="images/facebook.png"></a> 
+			<a href="https://twitter.com/owuor91"><img src="images/twitter.png"></a> 
+			<a href="https://www.linkedin.com/profile/view?id=335895208&trk=nav_responsive_tab_profile_pic"><img src="images/linkedin.png"></a> 
+			<a href="https://github.com/owuor91"><img src="images/github.png"></a> 	
+		</div>
+		<br> 
+	</section>	
+	<footer>&copy; 2015 @owuor91</footer>
+		<script>
+			$('nav').before('<div id="smartbutton"></div>');
+			$('#smartbutton').append('<div class="buttonline"></div>');
+			$('#smartbutton').append('<div class="buttonline"></div>');
+			$('#smartbutton').append('<div class="buttonline"></div>');
+
+			// add click listener
+			$('#smartbutton').click(function(event) 
+			{
+			  $('nav').animate({height:'toggle'},100);
+			});
+		</script>
+</body>
+</html>
