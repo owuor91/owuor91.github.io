@@ -58,7 +58,7 @@ section{
 }
 
 #home{
-	background-image: url('file:///home/teeshirt/Documents/mysite/images/pencil2.jpg');
+	background-image: url('../images/pencil2.jpg');
 	background-color: rgba(255,255,255,0.1);
 	background-size: contain;
 	background-position: center;
