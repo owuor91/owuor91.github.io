@@ -198,13 +198,14 @@ footer{
 	text-align: justify;
 	font-size: 25px;
 	line-height: 1.6em;
-	margin-bottom: 900px;
+
 }
 
 .blog-section{
 	
 	padding: 0;
 	margin-bottom: 900px !important;
+	padding-bottom: 900px
 }
 
 p{
