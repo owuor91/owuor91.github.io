@@ -203,7 +203,7 @@ footer{
 .blog-section{
 	
 	padding: 0;
-	margin-bottom: 900px;
+	margin-bottom: 900px !important;
 }
 
 p{
