@@ -97,6 +97,11 @@ section{
 	padding-top: 100px;
 }
 
+.resume{
+	width: 33%;
+	float: right;
+}
+
 .blog-image{
 	float:left;
 	width:30%;
