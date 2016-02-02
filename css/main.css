@@ -78,7 +78,7 @@ section{
 
 #portfolio{
 	min-height: 900px !important;
-	height: 100vh;
+	height: 120vh;
 }
 
 #contact{
@@ -109,9 +109,17 @@ section{
 
 }
 
+.webimg > .text{
+	width: 350px;
+	height: 60%;
+	padding-top: 20%;
+}
+
+
 .wrapper {
     position: relative;
     display:block;
+		margin-bottom: 50pxl
 }
 
 .text {
