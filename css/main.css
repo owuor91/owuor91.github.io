@@ -92,13 +92,13 @@ section{
 .blog-image{
 	float:left;
 	width:30%;
-	margin:0 auto; 
+	margin:0 auto;
 	margin-bottom: 40px;
 }
 
 .blog-container{
 	margin-left:10%;
-	
+
 }
 
 .wrapper {
@@ -114,8 +114,8 @@ section{
     font-weight: bold;
     background-color:rgba(200,225,255,0.8);
     width: 300px;
-    height: 160px;
-    padding-top: 40px;
+    height: 500px;
+    padding-top: 50%;
     z-index: 10;
     opacity: 0;
     -webkit-transition: all 0.5s ease;
@@ -157,7 +157,7 @@ a.wrapper{text-decoration: none;}
 }
 
 a.top:hover{
-	transform: scale(1.1); 
+	transform: scale(1.1);
 }
 
 footer{
@@ -202,7 +202,7 @@ footer{
 }
 
 .blog-section{
-	
+
 	padding: 0;
 	margin-bottom: 900px !important;
 	padding-bottom: 900px
@@ -238,7 +238,7 @@ p{
 	}
 
 	.social-icons, .social-icons a{
-		padding: 0; 
+		padding: 0;
 		margin: 0 auto;
 		line-height: 100px;
 	}
@@ -260,7 +260,7 @@ p{
 		margin-left: 60%;
 		padding: 7px;
 	}
-	
+
 	nav{
 		display:none;
 	}
@@ -268,7 +268,7 @@ p{
 	nav a{
 		position: relative;
 	}
-	
+
 	.navigation li{
 		width:200px;
 		height: 50px;
@@ -278,7 +278,7 @@ p{
 		text-align: left;
 		border-bottom:1px solid #000;
 		margin: 0;
-	} 
+	}
 
 	.buttonline {
 		background-color:#000;
@@ -309,5 +309,5 @@ p{
 		height: auto;
 	}
 
-	
+
 }
