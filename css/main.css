@@ -64,18 +64,26 @@ section{
 	background-position: center;
 	background-repeat:no-repeat;
 	color:#fff;
+	height: 100vh;
 }
 
 #about{
 	background-color: rgba(120,120,250,0.4);
+	height: 100vh;
 }
 
 #blog{
 	min-height: 660px !important;
 }
 
+#portfolio{
+	min-height: 900px !important;
+	height: 100vh;
+}
+
 #contact{
 	background-color: rgba(176,196,222,0.7);
+	height: 100vh;
 }
 
 .content-slider li{
@@ -114,7 +122,7 @@ section{
     font-weight: bold;
     background-color:rgba(200,225,255,0.8);
     width: 300px;
-    height: 500px;
+    height: 50%;
     padding-top: 50%;
     z-index: 10;
     opacity: 0;
