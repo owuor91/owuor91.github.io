@@ -4,12 +4,12 @@
 <title>John Owuor</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/main.css">		
+<link rel="stylesheet" href="css/main.css">
 <link rel="shortcut icon" type="image/ico" href="images/favicon.ico"/>
 <link type="text/css" rel="stylesheet" href="lightSlider/css/lightSlider.css" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="lightSlider/js/jquery.lightSlider.js"></script> 
+<script src="lightSlider/js/jquery.lightSlider.js"></script>
 <script>
     	 $(document).ready(function() {
 			$("#demo").lightSlider({
@@ -63,14 +63,14 @@
 	</section>
 	<section id="about">
 		<img src="images/silhouette67.png"> <br>
-		<span class="section-header">Web / Mobile Developer</span> 
-			<div class="demo">	
+		<span class="section-header">Web / Mobile Developer</span>
+			<div class="demo">
 				<ul id="demo" class="content-slider">
 				  <li><img src="images/android.png"> <br> Android apps </li>
 				  <li> <img src="images/codings1.png"> <br> Websites & Web Apps </li>
 				  <li style="padding-top:50px"> Skills<br>
-				  		
-				  		<span style="font-size:40px;"> 
+
+				  		<span style="font-size:40px;">
 				  		<img src="images/check.png" style="margin-right:10px">Android development <br>
 				  		<img src="images/check.png" style="margin-right:10px">HTML/CSS/Javascript/jQuery<br>
 				  		<img src="images/check.png" style="margin-right:10px">Ruby, Ruby on Rails, PHP/MySQL<br>
@@ -80,12 +80,12 @@
 				    </li>
 <!-- 				  <li> <img src="images/drink81.png"> <br>Napenda kukata maji  </li> -->
 				 </ul>
-			</div>	
+			</div>
 	<a href="#home" class="top"><img src="images/top.png"></a>
 	</section>
-	<section id="blog">
+	<!-- <section id="blog">
 	<img src="images/talk18.png"> <img src="images/comments16.png"> <br>
-		<span class="section-header">Opinions, Insight, Technology. </span> 
+		<span class="section-header">Opinions, Insight, Technology. </span>
 		<br> <br>
 		<div class="blog-container">
 			<div class="blog-image">
@@ -110,21 +110,51 @@
 
 			<div class="blog-image">
 				<a href="#" class="wrapper"> <span class="text"> The $10k Apple watch, SMH </span> <img src="images/watch.jpg" width="300px" height="200px"> </a>
-			</div> 
+			</div>
 		</div>
-	</section>
+	</section> -->
+  <section id="portfolio">
+  <img src="images/talk18.png"> <img src="images/comments16.png"> <br>
+    <span class="section-header">Work I've done </span>
+    <br> <br>
+    <div class="blog-container">
+      <div class="blog-image">
+        <a href="blog.html#range2015" class="wrapper"> <span class="text"> Range Rover 2015 review </span> <img src="images/screenshot1.png" width="300px" height="200px"> </a>
+      </div>
+
+      <div class="blog-image">
+        <a href="blog.html#vegas" class="wrapper"> <span class="text"> What happens in Vegas... </span> <img src="images/screenshot2.png" width="300px" height="200px"> </a>
+      </div>
+
+      <div class="blog-image">
+        <a href="blog.html#modernart" class="wrapper"> <span class="text"> Demystifying modern art </span> <img src="images/screenshot3.png" width="300px" height="200px"> </a>
+      </div>
+
+      <div class="blog-image">
+        <a href="#" class="wrapper"> <span class="text"> Medium rare steak recipe </span> <img src="images/screenshot4.png" width="300px" height="200px"> </a>
+      </div>
+
+      <div class="blog-image">
+        <a href="blog.html#topgear" class="wrapper"> <span class="text"> Top Gear after Clarkson: Fail or Fail? </span> <img src="images/screenshot5.png" width="300px" height="200px"> </a>
+      </div>
+
+      <div class="blog-image">
+        <a href="#" class="wrapper"> <span class="text"> The $10k Apple watch, SMH </span> <img src="images/screenshot6.png" width="300px" height="200px"> </a>
+      </div>
+    </div>
+  </section>
 	<section id="contact">
 		<img src="images/contact.png"> <br>
 		<span class="section-header">Stay away</span> <br><br>
 		<!-- Seriously, do proceed past this point at your own peril. -->
 		<div class="social-icons">
-			<a href="https://www.facebook.com/owuor91"><img src="images/facebook.png"></a> 
-			<a href="https://twitter.com/owuor91"><img src="images/twitter.png"></a> 
-			<a href="https://www.linkedin.com/profile/view?id=335895208&trk=nav_responsive_tab_profile_pic"><img src="images/linkedin.png"></a> 
-			<a href="https://github.com/owuor91"><img src="images/github.png"></a> 	
+			<a href="https://www.facebook.com/owuor91"><img src="images/facebook.png"></a>
+			<a href="https://twitter.com/owuor91"><img src="images/twitter.png"></a>
+			<a href="https://www.linkedin.com/profile/view?id=335895208&trk=nav_responsive_tab_profile_pic"><img src="images/linkedin.png"></a>
+			<a href="https://github.com/owuor91"><img src="images/github.png"></a>
 		</div>
-		<br> 
-	</section>	
+		<br>
+	</section>
 	<footer>&copy; 2015 @owuor91</footer>
 		<script>
 			$('nav').before('<div id="smartbutton"></div>');
@@ -133,7 +163,7 @@
 			$('#smartbutton').append('<div class="buttonline"></div>');
 
 			// add click listener
-			$('#smartbutton').click(function(event) 
+			$('#smartbutton').click(function(event)
 			{
 			  $('nav').animate({height:'toggle'},100);
 			});
