@@ -121,7 +121,7 @@ section{
     font-size: 30px;
     font-weight: bold;
     background-color:rgba(200,225,255,0.8);
-    width: 300px;
+    width: 280px;
     height: 50%;
     padding-top: 50%;
     z-index: 10;
@@ -143,7 +143,7 @@ img {
 a.wrapper{text-decoration: none;}
 
 .social-icons{
-	line-height: 400px;
+	line-height: 500px;
 	margin-top: 50px;
 }
 
