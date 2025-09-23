@@ -5,32 +5,6 @@ body{
 	font-family: 'Open Sans', sans-serif;
 }
 
-
-/*navigation*/
-nav{
-	text-align: center;
-	margin-bottom: 55px;
-	font-size: 18px;
-}
-
-.navigation li {
-	display:inline;
-	text-decoration: none;
-	padding-right:200px;
-	padding-left: 100px;
-}
-
-nav a{
-	text-decoration: none;
-	color: gray;
-	position: fixed;
-	font-weight: bold;
-}
-
-nav a:hover{
-	color: purple;
-}
-
 /*page content*/
 
 section{
@@ -65,53 +39,10 @@ section{
 	background-repeat:no-repeat;
 	color:#fff;
 	height: 100vh;
-}
-
-#about{
-	background-color: rgba(120,120,250,0.4);
-	height: 100vh;
-}
-
-#blog{
-	min-height: 660px !important;
-}
-
-#portfolio{
-	min-height: 900px !important;
-	height: 120vh;
-}
-
-#contact{
-	background-color: rgba(176,196,222,0.7);
-	height: 100vh;
-}
-
-.content-slider li{
-	background-color: rgba(120,0,250,0.4);
-	color:#fff;
-	font-size: 60px;
-	margin:0 auto;
-	width: 80%;
-	height:450px;
-	margin-bottom: 50px;
-	padding-top: 100px;
-}
-
-.resume{
-	width: 33%;
-	float: right;
-}
-
-.blog-image{
-	float:left;
-	width:30%;
-	margin:0 auto;
-	margin-bottom: 40px;
-}
-
-.blog-container{
-	margin-left:10%;
-
+	display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* or center depending on your preference */
+  padding: 20px;
 }
 
 .webimg > .text{
@@ -188,147 +119,8 @@ footer{
 	background-color: rgba(0,0,0,1);
 }
 
-/***************Blog Styling******************/
-.headerwrap{
-	position: relative;
-    display:block;
-}
-
-.headertext{
-	position: absolute;
-    top: 0;
-    color:#fff;
-    background-color: rgba(2,2,2,0.7);
-    font-size: 130px;
-    font-weight: boldi;
-    line-height: 130px;
-    width: 100%;
-    height: 300px;
-    z-index: 10;
-    opacity: 1;
-    text-align: center;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-.blog-content{
-	width: 60%;
-	margin: 0 auto;
-	text-align: justify;
-	font-size: 25px;
-	line-height: 1.6em;
-
-}
-
-.blog-section{
-
-	padding: 0;
-	margin-bottom: 900px !important;
-	padding-bottom: 900px
-}
-
-p{
-	margin-bottom: 30px
-}
-
-
-/***************End Blog Styling**************/
-
-@media (max-width: 600px){
-
-	.cont{
-		font-size: 80px;
-		margin:0 auto;
-		width: 100%;
-		height:200px;
-		line-height: 100px;
-	}
-
-	#home{
-		height: 350px !important;
-	}
-
-	.top{display: none;}
-
-	.blog-container{margin: 0 auto;}
-
-	.blog-image{
-		width: 100%;
-	}
-
-	.social-icons, .social-icons a{
-		padding: 0;
-		margin: 0 auto;
-		line-height: 100px;
-	}
-
-	 .social-icons img{
-	 	margin-left:20%;
-	 	margin-right: 20%;
-	 	margin-top: 30px;
-	 }
-
-
-	#smartbutton{
-		display:inline-block !important;
-		width:20px;
-		height:15px;
-		cursor:pointer;
-		border:1px solid #000;
-		border-radius:3px;
-		margin-left: 60%;
-		padding: 7px;
-	}
-
-	nav{
-		display:none;
-	}
-
-	nav a{
-		position: relative;
-	}
-
-	.navigation li{
-		width:200px;
-		height: 50px;
-		line-height: 50px;
-		padding: 0;
-		display: block;
-		text-align: left;
-		border-bottom:1px solid #000;
-		margin: 0;
-	}
-
-	.buttonline {
-		background-color:#000;
-		height:3px;
-		margin-top:4px;
-	}
-
-	.buttonline:first-child {
-		margin-top:0px;
-	}
-
-
-	.headertext{
-		font-size: 40px;
-    	line-height: 40px;
-    	height: auto;
-    	margin-bottom: 2em;
-	}
-
-	.blog-content{
-		width: 90%;
-		margin-left:5%;
-		margin-right:5%;
-		margin-top: 2em;
-		text-align: justify;
-		font-size: 18px;
-		line-height: 1.6em;
-		height: auto;
-	}
-
-
+.right {
+    text-align: right;
+    margin-top: 20px;
+		color: #000
 }
