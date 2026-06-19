@@ -1,6 +1,8 @@
 import { profile } from "@/data/profile";
 
 export function Journey() {
+  const journeyItems = profile.journey.filter((item) => item.company !== "Moringa School");
+
   return (
     <section id="journey" className="relative py-32">
       <div className="absolute inset-0 grid-bg opacity-30" aria-hidden />
@@ -23,12 +25,10 @@ export function Journey() {
           />
 
           <div className="space-y-12">
-            {profile.journey.map((item, index) => (
+            {journeyItems.map((item, index) => (
               <article
                 key={`${item.company}-${item.period}`}
-                className={`relative grid gap-6 md:grid-cols-2 md:gap-12 ${
-                  index % 2 === 0 ? "" : "md:[direction:rtl]"
-                }`}
+                className="relative grid gap-6 md:grid-cols-2 md:gap-12"
               >
                 {/* Dot */}
                 <div
@@ -40,50 +40,79 @@ export function Journey() {
                   </div>
                 </div>
 
-                {/* Content card */}
-                <div
-                  className={`ml-8 md:ml-0 ${
-                    index % 2 === 0
-                      ? "md:col-start-1 md:pr-12 md:text-right"
-                      : "md:col-start-2 md:pl-12 md:[direction:ltr]"
-                  }`}
-                >
-                  <div className="glass group rounded-2xl p-6 transition-all duration-300 hover:border-accent/30 hover:glow-accent md:p-8">
-                    <div className="mb-3 flex flex-wrap items-center gap-3 md:justify-end">
-                      <span className="text-xs tracking-wider text-accent uppercase">
-                        {item.period}
-                      </span>
-                      <span className="text-xs text-muted">· {item.duration}</span>
-                    </div>
-
-                    <h3 className="font-[family-name:var(--font-syne)] text-xl font-bold text-frost md:text-2xl">
-                      {item.role}
-                    </h3>
-                    <p className="mt-1 text-sm font-medium text-flame">{item.company}</p>
-
-                    <p className="mt-4 text-sm leading-relaxed text-muted md:text-base">
-                      {item.highlight}
-                    </p>
-
-                    <div
-                      className={`mt-5 flex flex-wrap gap-2 ${
-                        index % 2 === 0 ? "md:justify-end" : ""
-                      }`}
-                    >
-                      {item.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-md bg-surface px-2.5 py-1 text-[11px] tracking-wide text-muted uppercase"
-                        >
-                          {tag}
+                {/* Left column (even items) */}
+                {index % 2 === 0 ? (
+                  <div className="ml-8 md:ml-0 md:col-start-1 md:pr-12 md:text-right">
+                    <div className="glass group rounded-2xl p-6 transition-all duration-300 hover:border-accent/30 hover:glow-accent md:p-8">
+                      <div className="mb-3 flex flex-wrap items-center gap-3 md:justify-end">
+                        <span className="text-xs tracking-wider text-accent uppercase">
+                          {item.period}
                         </span>
-                      ))}
+                        <span className="text-xs text-muted">· {item.duration}</span>
+                      </div>
+
+                      <h3 className="font-[family-name:var(--font-syne)] text-xl font-bold text-frost md:text-2xl">
+                        {item.role}
+                      </h3>
+                      <p className="mt-1 text-sm font-medium text-flame">
+                        {item.company}
+                      </p>
+
+                      <p className="mt-4 text-sm leading-relaxed text-muted md:text-base">
+                        {item.highlight}
+                      </p>
+
+                      <div className="mt-5 flex flex-wrap gap-2 md:justify-end">
+                        {item.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded-md bg-surface px-2.5 py-1 text-[11px] tracking-wide text-muted uppercase"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
+                ) : (
+                  <div className="hidden md:block" />
+                )}
 
-                {/* Empty column for alternating layout */}
-                <div className="hidden md:block" />
+                {/* Right column (odd items) */}
+                {index % 2 === 1 ? (
+                  <div className="ml-8 md:ml-0 md:col-start-2 md:pl-12">
+                    <div className="glass group rounded-2xl p-6 transition-all duration-300 hover:border-accent/30 hover:glow-accent md:p-8">
+                      <div className="mb-3 flex flex-wrap items-center gap-3">
+                        <span className="text-xs tracking-wider text-accent uppercase">
+                          {item.period}
+                        </span>
+                        <span className="text-xs text-muted">· {item.duration}</span>
+                      </div>
+
+                      <h3 className="font-[family-name:var(--font-syne)] text-xl font-bold text-frost md:text-2xl">
+                        {item.role}
+                      </h3>
+                      <p className="mt-1 text-sm font-medium text-flame">{item.company}</p>
+
+                      <p className="mt-4 text-sm leading-relaxed text-muted md:text-base">
+                        {item.highlight}
+                      </p>
+
+                      <div className="mt-5 flex flex-wrap gap-2">
+                        {item.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded-md bg-surface px-2.5 py-1 text-[11px] tracking-wide text-muted uppercase"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="hidden md:block" />
+                )}
               </article>
             ))}
           </div>

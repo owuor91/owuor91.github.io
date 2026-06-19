@@ -1,4 +1,5 @@
 import { profile } from "@/data/profile";
+import { SkillIcon } from "@/components/SkillIcon";
 
 export function About() {
   return (
@@ -53,8 +54,11 @@ export function About() {
               {profile.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="rounded-full border border-border bg-surface-elevated/50 px-4 py-2 text-sm text-frost/80 transition-colors hover:border-accent/40 hover:text-accent"
+                  className="group inline-flex items-center gap-2 rounded-full border border-border bg-surface-elevated/50 px-4 py-2 text-sm text-frost/80 transition-colors hover:border-accent/40 hover:text-accent"
                 >
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full border border-border/60 bg-ink/30 text-muted transition-colors group-hover:border-accent/40 group-hover:text-accent">
+                    <SkillIcon name={skill} className="h-4 w-4" />
+                  </span>
                   {skill}
                 </span>
               ))}

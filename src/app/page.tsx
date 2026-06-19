@@ -1,5 +1,6 @@
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
+import { DigitalTwinChat } from "@/components/DigitalTwinChat";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Journey } from "@/components/Journey";
@@ -28,6 +29,8 @@ export default function Home() {
         <Journey />
         <SectionDivider />
         <Portfolio />
+        <SectionDivider />
+        <DigitalTwinChat />
         <Contact />
       </main>
       <Footer />
