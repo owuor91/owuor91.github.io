@@ -1,0 +1,42 @@
+import type { Metadata } from "next";
+import { DM_Sans, Syne } from "next/font/google";
+import "./globals.css";
+
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne",
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "John Owuor — Software Developer",
+  description:
+    "Backend engineer and Android developer with 10 years of experience building fintech, humanitarian, and social impact systems across East Africa.",
+  icons: {
+    icon: "/favicon.svg",
+  },
+  openGraph: {
+    title: "John Owuor — Software Developer",
+    description:
+      "Backend engineer and Android developer with 10 years of experience.",
+    type: "website",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={`${syne.variable} ${dmSans.variable}`}>
+      <body className="overflow-x-hidden">{children}</body>
+    </html>
+  );
+}
