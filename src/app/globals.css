@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Syne";
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url("/fonts/syne.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url("/fonts/dm-sans.woff2") format("woff2");
+}
+
 @theme inline {
   --color-ink: #08080a;
   --color-surface: #111114;
@@ -11,8 +27,8 @@
   --color-accent-dim: #00e5b033;
   --color-flame: #ff4d2e;
   --color-flame-dim: #ff4d2e22;
-  --font-syne: ui-sans-serif;
-  --font-dm-sans: ui-sans-serif;
+  --font-syne: "Syne", ui-sans-serif;
+  --font-dm-sans: "DM Sans", ui-sans-serif;
   --font-display: var(--font-syne);
   --font-body: var(--font-dm-sans);
 }
