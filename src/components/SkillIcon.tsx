@@ -200,6 +200,132 @@ export function SkillIcon({ name, className }: SkillIconProps) {
         </BaseIcon>
       );
 
+    case "PostgreSQL":
+      return (
+        <BaseIcon className={className} title="PostgreSQL">
+          {/* Elephant-inspired mark (simplified) */}
+          <path
+            d="M7.4 12.3c0-3 2.2-5.5 5.1-5.8 3.3-.4 6.1 2.1 6.1 5.4 0 3.8-2.3 6.3-5.6 6.3-2.4 0-3.7-1-4.4-2.2-.5.1-1 .1-1.6 0-.9-.2-1.6-1-1.6-1.9 0-.9.8-1.8 2-1.8Z"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M13.7 13.6c.6.1 1.1.5 1.1 1.2 0 .8-.7 1.4-1.5 1.5-.9.1-1.8-.5-1.9-1.4"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+          />
+          <path
+            d="M15.2 11.5c.9 0 1.8.6 1.8 1.7 0 .8-.5 1.3-1.2 1.5"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+          />
+          <circle cx="14.8" cy="11.1" r="0.9" fill="currentColor" />
+        </BaseIcon>
+      );
+
+    case "Jetpack Compose":
+      return (
+        <BaseIcon className={className} title="Jetpack Compose">
+          {/* Compose chevrons (simplified) */}
+          <path
+            d="M6.2 12.2 12 6.4l1.9 1.9-4 3.9 4 3.9-1.9 1.9-5.8-5.8Z"
+            fill="currentColor"
+            opacity="0.9"
+          />
+          <path
+            d="M11.6 12.2 17.4 6.4l1.9 1.9-4 3.9 4 3.9-1.9 1.9-5.8-5.8Z"
+            fill="currentColor"
+            opacity="0.55"
+          />
+        </BaseIcon>
+      );
+
+    case "Flask":
+      return (
+        <BaseIcon className={className} title="Flask">
+          <path
+            d="M10 3.8h4M11 3.8v4.1l-4.2 7.3A4 4 0 0 0 10.3 21h3.4a4 4 0 0 0 3.5-5.8L13 7.9V3.8"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M9.2 13.2h5.6"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            opacity="0.7"
+          />
+        </BaseIcon>
+      );
+
+    case "RabbitMQ":
+      return (
+        <BaseIcon className={className} title="RabbitMQ">
+          {/* RabbitMQ wordmark-inspired: rounded badge with dots */}
+          <rect
+            x="4.2"
+            y="6.8"
+            width="15.6"
+            height="10.4"
+            rx="2.6"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
+          <path
+            d="M7.4 12h.01M9.8 12h.01M12.2 12h.01M14.6 12h.01M17 12h.01"
+            stroke="currentColor"
+            strokeWidth="2.6"
+            strokeLinecap="round"
+          />
+        </BaseIcon>
+      );
+
+    case "Docker":
+      return (
+        <BaseIcon className={className} title="Docker">
+          {/* Whale + containers (simplified) */}
+          <rect x="6.2" y="9" width="2.2" height="2.2" fill="currentColor" />
+          <rect x="9.1" y="9" width="2.2" height="2.2" fill="currentColor" />
+          <rect x="12" y="9" width="2.2" height="2.2" fill="currentColor" />
+          <rect x="9.1" y="6.1" width="2.2" height="2.2" fill="currentColor" />
+          <rect x="12" y="6.1" width="2.2" height="2.2" fill="currentColor" />
+          <path
+            d="M5.2 12.2h12.2c1.1 0 2 .9 2 2 0 3.2-2.5 5.7-6.8 5.7-4.1 0-6.8-2.3-7.8-5.3-.2-.6.2-1.2.8-1.2h-.4Z"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M18.8 13.1h1.4c.9 0 1.6.7 1.6 1.6 0 .9-.7 1.6-1.6 1.6h-1.4"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+          />
+          <circle cx="17.6" cy="15" r="0.7" fill="currentColor" />
+        </BaseIcon>
+      );
+
+    case "Kubernetes":
+      return (
+        <BaseIcon className={className} title="Kubernetes">
+          {/* Helm wheel-inspired mark (simplified) */}
+          <circle cx="12" cy="12" r="7.8" stroke="currentColor" strokeWidth="2" />
+          <circle cx="12" cy="12" r="2.2" fill="currentColor" />
+          <path
+            d="M12 4.2v3.2M12 16.6v3.2M4.2 12h3.2M16.6 12h3.2M6.6 6.6l2.3 2.3M15.1 15.1l2.3 2.3M17.4 6.6l-2.3 2.3M8.9 15.1l-2.3 2.3"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            opacity="0.75"
+          />
+        </BaseIcon>
+      );
+
     default:
       return (
         <BaseIcon className={className}>
