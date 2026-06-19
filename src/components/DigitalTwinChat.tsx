@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import { Markdown } from "@/components/Markdown";
 
 type ChatMessage = {
@@ -9,71 +9,22 @@ type ChatMessage = {
 };
 
 export function DigitalTwinChat() {
-  const [messages, setMessages] = useState<ChatMessage[]>([
-    {
-      role: "assistant",
-      content:
-        "Ask me anything about John’s career — roles, projects, skills, or what he’s built.",
-    },
-  ]);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const listRef = useRef<HTMLDivElement | null>(null);
 
-  const canSend = useMemo(() => input.trim().length > 0 && !loading, [input, loading]);
-
-  const scrollToBottom = () => {
-    const el = listRef.current;
-    if (!el) return;
-    el.scrollTop = el.scrollHeight;
-  };
+  const canSend = useMemo(() => input.trim().length > 0, [input]);
 
   const send = async () => {
     const content = input.trim();
-    if (!content || loading) return;
+    if (!content) return;
 
-    setError(null);
-    setLoading(true);
     setInput("");
 
-    const nextMessages: ChatMessage[] = [...messages, { role: "user", content }];
-    setMessages(nextMessages);
-
-    queueMicrotask(scrollToBottom);
-
-    try {
-      const res = await fetch("/api/digital-twin", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: nextMessages }),
-      });
-
-      const data = (await res.json().catch(() => null)) as
-        | { message?: { role?: "assistant"; content?: string }; error?: string }
-        | null;
-
-      if (!res.ok) {
-        const msg =
-          data?.error ||
-          `Request failed (${res.status}). Check your OPENROUTER_API_KEY and model.`;
-        setError(msg);
-        return;
-      }
-
-      const reply = data?.message?.content?.trim();
-      if (!reply) {
-        setError("Empty response from the digital twin.");
-        return;
-      }
-
-      setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
-      queueMicrotask(scrollToBottom);
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "Unexpected error.");
-    } finally {
-      setLoading(false);
-    }
+    setMessages((prev) => [...prev, { role: "user", content }]);
+    setError(
+      "Digital Twin chat is disabled on GitHub Pages (static hosting can’t run the server API route that keeps your API key private). Deploy to Vercel/Render to enable chat.",
+    );
   };
 
   return (
@@ -99,9 +50,12 @@ export function DigitalTwinChat() {
           <div className="grid gap-5 lg:grid-cols-12">
             <div className="lg:col-span-8">
               <div
-                ref={listRef}
                 className="h-[420px] space-y-3 overflow-auto rounded-2xl border border-border/60 bg-ink/20 p-4"
               >
+                <div className="rounded-2xl border border-border/60 bg-surface-elevated/40 px-4 py-3 text-sm leading-relaxed text-frost/90">
+                  Digital Twin chat needs a server endpoint (to keep API keys private). GitHub
+                  Pages is static-only, so chat is disabled here.
+                </div>
                 {messages.map((m, idx) => (
                   <div
                     key={idx}
@@ -118,13 +72,6 @@ export function DigitalTwinChat() {
                     </div>
                   </div>
                 ))}
-                {loading && (
-                  <div className="flex justify-start">
-                    <div className="rounded-2xl border border-border/60 bg-surface-elevated/40 px-4 py-3 text-sm text-muted">
-                      Thinking…
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
 
@@ -168,18 +115,10 @@ export function DigitalTwinChat() {
                   <button
                     type="button"
                     onClick={() => {
-                      setMessages([
-                        {
-                          role: "assistant",
-                          content:
-                            "Ask me anything about John’s career — roles, projects, skills, or what he’s built.",
-                        },
-                      ]);
+                      setMessages([]);
                       setError(null);
-                      queueMicrotask(scrollToBottom);
                     }}
                     className="rounded-full border border-border/70 px-4 py-2 text-xs font-medium tracking-wider text-muted uppercase transition-colors hover:border-accent/30 hover:text-frost"
-                    disabled={loading}
                   >
                     Clear
                   </button>
@@ -190,7 +129,7 @@ export function DigitalTwinChat() {
                     className="rounded-full bg-accent px-6 py-2 text-xs font-semibold tracking-wider text-ink uppercase transition-opacity disabled:opacity-40"
                     title="Send (Ctrl/⌘ + Enter)"
                   >
-                    {loading ? "Sending…" : "Send"}
+                    Send
                   </button>
                 </div>
                 <p className="mt-2 text-[11px] text-muted">
